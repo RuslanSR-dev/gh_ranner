@@ -3,56 +3,56 @@
   "children" : [ {
     "name" : "Test defects",
     "children" : [ {
-      "name" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom unknown error: no chrome binary at /usr/bin/google-chrome\nStacktrace:\n#0 0x55b8bca9c8da <unknown>\n#1 0x55b8bc5c6530 <unknown>\n#2 0x55b8bc5fad2e <unknown>\n#3 0x55b8bc5f91b5 <unknown>\n#4 0x55b8bc6443d5 <unknown>\n#5 0x55b8bc643a76 <unknown>\n#6 0x55b8bc6381b3 <unknown>\n#7 0x55b8bc606e92 <unknown>\n#8 0x55b8bc607e6e <unknown>\n#9 0x55b8bca6b33f <unknown>\n#10 0x55b8bca6f45d <unknown>\n#11 0x55b8bca59987 <unknown>\n#12 0x55b8bca6fbd1 <unknown>\n#13 0x55b8bca4172e <unknown>\n#14 0x55b8bca8b5e8 <unknown>\n#15 0x55b8bca8b7ea <unknown>\n#16 0x55b8bca9b548 <unknown>\n#17 0x7f8ed0e18ac3 <unknown>",
-      "children" : [ {
-        "name" : "Add new services",
-        "uid" : "40a38670e45cc881",
-        "parentUid" : "0efa63294adcabb34ab9963483a52d8e",
-        "status" : "broken",
-        "time" : {
-          "start" : 1732981682137,
-          "stop" : 1732981682137,
-          "duration" : 0
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "parameters" : [ ]
-      } ],
-      "uid" : "0efa63294adcabb34ab9963483a52d8e"
-    }, {
-      "name" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom unknown error: no chrome binary at /usr/bin/google-chrome\nStacktrace:\n#0 0x5619e14618da <unknown>\n#1 0x5619e0f8b530 <unknown>\n#2 0x5619e0fbfd2e <unknown>\n#3 0x5619e0fbe1b5 <unknown>\n#4 0x5619e10093d5 <unknown>\n#5 0x5619e1008a76 <unknown>\n#6 0x5619e0ffd1b3 <unknown>\n#7 0x5619e0fcbe92 <unknown>\n#8 0x5619e0fcce6e <unknown>\n#9 0x5619e143033f <unknown>\n#10 0x5619e143445d <unknown>\n#11 0x5619e141e987 <unknown>\n#12 0x5619e1434bd1 <unknown>\n#13 0x5619e140672e <unknown>\n#14 0x5619e14505e8 <unknown>\n#15 0x5619e14507ea <unknown>\n#16 0x5619e1460548 <unknown>\n#17 0x7fc8aaae2ac3 <unknown>",
+      "name" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom unknown error: no chrome binary at /usr/bin/google-chrome\nStacktrace:\n#0 0x55ffd52118da <unknown>\n#1 0x55ffd4d3b530 <unknown>\n#2 0x55ffd4d6fd2e <unknown>\n#3 0x55ffd4d6e1b5 <unknown>\n#4 0x55ffd4db93d5 <unknown>\n#5 0x55ffd4db8a76 <unknown>\n#6 0x55ffd4dad1b3 <unknown>\n#7 0x55ffd4d7be92 <unknown>\n#8 0x55ffd4d7ce6e <unknown>\n#9 0x55ffd51e033f <unknown>\n#10 0x55ffd51e445d <unknown>\n#11 0x55ffd51ce987 <unknown>\n#12 0x55ffd51e4bd1 <unknown>\n#13 0x55ffd51b672e <unknown>\n#14 0x55ffd52005e8 <unknown>\n#15 0x55ffd52007ea <unknown>\n#16 0x55ffd5210548 <unknown>\n#17 0x7f1045bafac3 <unknown>",
       "children" : [ {
         "name" : "Account login",
-        "uid" : "4d7f0c17e34902fa",
-        "parentUid" : "5596dd4cefa9992aaf55343a3df0c36a",
+        "uid" : "1e4fe9c7eb80b5d2",
+        "parentUid" : "4201a133bad7e503981d8c50af44fab4",
         "status" : "broken",
         "time" : {
-          "start" : 1732981682137,
-          "stop" : 1732981682137,
+          "start" : 1732982673502,
+          "stop" : 1732982673502,
           "duration" : 0
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "5596dd4cefa9992aaf55343a3df0c36a"
+      "uid" : "4201a133bad7e503981d8c50af44fab4"
     }, {
-      "name" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom unknown error: no chrome binary at /usr/bin/google-chrome\nStacktrace:\n#0 0x56082deef8da <unknown>\n#1 0x56082da19530 <unknown>\n#2 0x56082da4dd2e <unknown>\n#3 0x56082da4c1b5 <unknown>\n#4 0x56082da973d5 <unknown>\n#5 0x56082da96a76 <unknown>\n#6 0x56082da8b1b3 <unknown>\n#7 0x56082da59e92 <unknown>\n#8 0x56082da5ae6e <unknown>\n#9 0x56082debe33f <unknown>\n#10 0x56082dec245d <unknown>\n#11 0x56082deac987 <unknown>\n#12 0x56082dec2bd1 <unknown>\n#13 0x56082de9472e <unknown>\n#14 0x56082dede5e8 <unknown>\n#15 0x56082dede7ea <unknown>\n#16 0x56082deee548 <unknown>\n#17 0x7f4bbe599ac3 <unknown>",
+      "name" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom unknown error: no chrome binary at /usr/bin/google-chrome\nStacktrace:\n#0 0x5603c0ca98da <unknown>\n#1 0x5603c07d3530 <unknown>\n#2 0x5603c0807d2e <unknown>\n#3 0x5603c08061b5 <unknown>\n#4 0x5603c08513d5 <unknown>\n#5 0x5603c0850a76 <unknown>\n#6 0x5603c08451b3 <unknown>\n#7 0x5603c0813e92 <unknown>\n#8 0x5603c0814e6e <unknown>\n#9 0x5603c0c7833f <unknown>\n#10 0x5603c0c7c45d <unknown>\n#11 0x5603c0c66987 <unknown>\n#12 0x5603c0c7cbd1 <unknown>\n#13 0x5603c0c4e72e <unknown>\n#14 0x5603c0c985e8 <unknown>\n#15 0x5603c0c987ea <unknown>\n#16 0x5603c0ca8548 <unknown>\n#17 0x7f5034b53ac3 <unknown>",
+      "children" : [ {
+        "name" : "Add new services",
+        "uid" : "8ded66e33c5774f0",
+        "parentUid" : "2513073803781e917b0f8415ca5d9ce6",
+        "status" : "broken",
+        "time" : {
+          "start" : 1732982673502,
+          "stop" : 1732982673502,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "2513073803781e917b0f8415ca5d9ce6"
+    }, {
+      "name" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom unknown error: no chrome binary at /usr/bin/google-chrome\nStacktrace:\n#0 0x559a6e4ec8da <unknown>\n#1 0x559a6e016530 <unknown>\n#2 0x559a6e04ad2e <unknown>\n#3 0x559a6e0491b5 <unknown>\n#4 0x559a6e0943d5 <unknown>\n#5 0x559a6e093a76 <unknown>\n#6 0x559a6e0881b3 <unknown>\n#7 0x559a6e056e92 <unknown>\n#8 0x559a6e057e6e <unknown>\n#9 0x559a6e4bb33f <unknown>\n#10 0x559a6e4bf45d <unknown>\n#11 0x559a6e4a9987 <unknown>\n#12 0x559a6e4bfbd1 <unknown>\n#13 0x559a6e49172e <unknown>\n#14 0x559a6e4db5e8 <unknown>\n#15 0x559a6e4db7ea <unknown>\n#16 0x559a6e4eb548 <unknown>\n#17 0x7fdf9ad21ac3 <unknown>",
       "children" : [ {
         "name" : "Create a new request",
-        "uid" : "32697442e5bbbb7c",
-        "parentUid" : "f02663d9eb673aacc015d6ea75d6d162",
+        "uid" : "60d91e577cd6e788",
+        "parentUid" : "acebc5cca63b6e9a793ac417e4d0f4b7",
         "status" : "broken",
         "time" : {
-          "start" : 1732981682137,
-          "stop" : 1732981682137,
+          "start" : 1732982673502,
+          "stop" : 1732982673502,
           "duration" : 0
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       } ],
-      "uid" : "f02663d9eb673aacc015d6ea75d6d162"
+      "uid" : "acebc5cca63b6e9a793ac417e4d0f4b7"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   } ],

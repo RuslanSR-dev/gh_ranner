@@ -2,13 +2,23 @@
   "9442c393196b6d8cfbb530e634297e94" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 1,
+      "broken" : 2,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 1
+      "total" : 2
     },
     "items" : [ {
+      "uid" : "8ded66e33c5774f0",
+      "reportUrl" : "https://RuslanSR-dev.github.io/gh_ranner//#testresult/8ded66e33c5774f0",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom unknown error: no chrome binary at /usr/bin/google-chrome\nStacktrace:\n#0 0x5603c0ca98da <unknown>\n#1 0x5603c07d3530 <unknown>\n#2 0x5603c0807d2e <unknown>\n#3 0x5603c08061b5 <unknown>\n#4 0x5603c08513d5 <unknown>\n#5 0x5603c0850a76 <unknown>\n#6 0x5603c08451b3 <unknown>\n#7 0x5603c0813e92 <unknown>\n#8 0x5603c0814e6e <unknown>\n#9 0x5603c0c7833f <unknown>\n#10 0x5603c0c7c45d <unknown>\n#11 0x5603c0c66987 <unknown>\n#12 0x5603c0c7cbd1 <unknown>\n#13 0x5603c0c4e72e <unknown>\n#14 0x5603c0c985e8 <unknown>\n#15 0x5603c0c987ea <unknown>\n#16 0x5603c0ca8548 <unknown>\n#17 0x7f5034b53ac3 <unknown>",
+      "time" : {
+        "start" : 1732982673502,
+        "stop" : 1732982673502,
+        "duration" : 0
+      }
+    }, {
       "uid" : "40a38670e45cc881",
       "reportUrl" : "URL отчета/#testresult/40a38670e45cc881",
       "status" : "broken",
@@ -23,13 +33,23 @@
   "228e38d513cb30ccf4ed3a06049cb00d" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 1,
+      "broken" : 2,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 1
+      "total" : 2
     },
     "items" : [ {
+      "uid" : "1e4fe9c7eb80b5d2",
+      "reportUrl" : "https://RuslanSR-dev.github.io/gh_ranner//#testresult/1e4fe9c7eb80b5d2",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom unknown error: no chrome binary at /usr/bin/google-chrome\nStacktrace:\n#0 0x55ffd52118da <unknown>\n#1 0x55ffd4d3b530 <unknown>\n#2 0x55ffd4d6fd2e <unknown>\n#3 0x55ffd4d6e1b5 <unknown>\n#4 0x55ffd4db93d5 <unknown>\n#5 0x55ffd4db8a76 <unknown>\n#6 0x55ffd4dad1b3 <unknown>\n#7 0x55ffd4d7be92 <unknown>\n#8 0x55ffd4d7ce6e <unknown>\n#9 0x55ffd51e033f <unknown>\n#10 0x55ffd51e445d <unknown>\n#11 0x55ffd51ce987 <unknown>\n#12 0x55ffd51e4bd1 <unknown>\n#13 0x55ffd51b672e <unknown>\n#14 0x55ffd52005e8 <unknown>\n#15 0x55ffd52007ea <unknown>\n#16 0x55ffd5210548 <unknown>\n#17 0x7f1045bafac3 <unknown>",
+      "time" : {
+        "start" : 1732982673502,
+        "stop" : 1732982673502,
+        "duration" : 0
+      }
+    }, {
       "uid" : "4d7f0c17e34902fa",
       "reportUrl" : "URL отчета/#testresult/4d7f0c17e34902fa",
       "status" : "broken",
@@ -44,13 +64,23 @@
   "a11523a7060bd6db37e62ce2f20289cd" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 1,
+      "broken" : 2,
       "skipped" : 0,
       "passed" : 0,
       "unknown" : 0,
-      "total" : 1
+      "total" : 2
     },
     "items" : [ {
+      "uid" : "60d91e577cd6e788",
+      "reportUrl" : "https://RuslanSR-dev.github.io/gh_ranner//#testresult/60d91e577cd6e788",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom unknown error: no chrome binary at /usr/bin/google-chrome\nStacktrace:\n#0 0x559a6e4ec8da <unknown>\n#1 0x559a6e016530 <unknown>\n#2 0x559a6e04ad2e <unknown>\n#3 0x559a6e0491b5 <unknown>\n#4 0x559a6e0943d5 <unknown>\n#5 0x559a6e093a76 <unknown>\n#6 0x559a6e0881b3 <unknown>\n#7 0x559a6e056e92 <unknown>\n#8 0x559a6e057e6e <unknown>\n#9 0x559a6e4bb33f <unknown>\n#10 0x559a6e4bf45d <unknown>\n#11 0x559a6e4a9987 <unknown>\n#12 0x559a6e4bfbd1 <unknown>\n#13 0x559a6e49172e <unknown>\n#14 0x559a6e4db5e8 <unknown>\n#15 0x559a6e4db7ea <unknown>\n#16 0x559a6e4eb548 <unknown>\n#17 0x7fdf9ad21ac3 <unknown>",
+      "time" : {
+        "start" : 1732982673502,
+        "stop" : 1732982673502,
+        "duration" : 0
+      }
+    }, {
       "uid" : "32697442e5bbbb7c",
       "reportUrl" : "URL отчета/#testresult/32697442e5bbbb7c",
       "status" : "broken",
