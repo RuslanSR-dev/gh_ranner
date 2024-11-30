@@ -7,7 +7,7 @@ env:
   BROWSER: chrome
   LOGIN: ${{ secrets.LOGIN }}
   PASSWORD: ${{ secrets.PASSWORD }}
-  CI_TOKEN: ${{ secrets.UI_TOKEN }}
+  CI_TOKEN: ${{ secrets.СI_TOKEN }}
 
 jobs:
   ui_tests:
