@@ -1,13 +1,13 @@
 name: UI_Tests
 
-on: [push]
+on: [ push ]
 
-# env:
-#   STAGE: qa
-#   BROWSER: chrome
-#   LOGIN: ${{ secrets.LOGIN }}
-#   PASSWORD: ${{ secrets.PASSWORD }}
-#   UI_TOKEN: ${{ secrets.UI_TOKEN }}
+env:
+  STAGE: qa
+  BROWSER: chrome
+  LOGIN: ${{ secrets.LOGIN }}
+  PASSWORD: ${{ secrets.PASSWORD }}
+  UI_TOKEN: ${{ secrets.UI_TOKEN }}
 
 jobs:
   ui_tests:
@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        
+
       - name: Copy gh-pages repo to runner
         uses: actions/checkout@v2
         with:
@@ -56,13 +56,6 @@ jobs:
       - name: Run tests
         run: |
           pytest --alluredir=allure-results --junitxml=test-results.xml || true
-
-      - name: Generate Allure Environment
-        run: |
-          echo "Branch=${GITHUB_REF##*/}" > allure-results/environment.properties
-          echo "Commit=${GITHUB_SHA::7}" >> allure-results/environment.properties
-          echo "Browser=$BROWSER" >> allure-results/environment.properties
-          echo "{\"name\": \"GitHub Actions\", \"type\": \"github\", \"url\": \"${{ github.repository_url }}\", \"buildOrder\": $GITHUB_RUN_ID, \"buildName\": \"${GITHUB_REF##*/}\", \"buildUrl\": \"${{ github.run_url }}\", \"reportUrl\": \"URL отчета\", \"reportName\": \"Отчет о тестировании\"}" > allure-results/executor.json
 
       - name: Copy Allure history
         run: |
