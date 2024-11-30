@@ -97,9 +97,7 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest  # Используем хост Ubuntu
-
     steps:
-      # Проверка кода из репозитория
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -125,6 +123,7 @@ jobs:
           curl -o allure-2.13.8.tgz -Ls https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.13.8/allure-commandline-2.13.8.tgz
           sudo tar -zxvf allure-2.13.8.tgz -C /opt/
           sudo ln -s /opt/allure-2.13.8/bin/allure /usr/bin/allure
+          sudo ln -s /usr/bin/chromium-browser /usr/bin/google-chrome  # Символическая ссылка для Chrome
           rm allure-2.13.8.tgz
 
       - name: Install dependencies
