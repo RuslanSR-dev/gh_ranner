@@ -14,7 +14,7 @@ jobs:
     name: Run Tests
     runs-on: ubuntu-latest # Хостовая среда, где будет запущен контейнер
     container:
-      image: python:3.12.0a4-alpine3.20 # Указываем контейнерный образ
+      image: python:3.12-alpine3.20 # Указываем контейнерный образ
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
