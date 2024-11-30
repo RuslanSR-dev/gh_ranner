@@ -48,11 +48,6 @@ jobs:
           wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.30-r0/glibc-2.30-r0.apk
           wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.30-r0/glibc-bin-2.30-r0.apk
 
-      - name: Install Git
-        run: |
-          apt-get update
-          apt-get install -y git
-
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -60,7 +55,7 @@ jobs:
 
       - name: Run tests
         run: |
-          pytest --alluredir=allure-results --junitxml=test-results.xml || true
+          STAGE=dev BROWSER=chrome pytest --alluredir=allure-results --junitxml=test-results/junit.xml || true
 
       - name: Copy Allure history
         run: |
