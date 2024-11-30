@@ -7,40 +7,40 @@
       "children" : [ {
         "name" : "TestAddNewServices",
         "children" : [ {
-          "name" : "Create a new request",
-          "uid" : "c2d07e38ccbb9165",
+          "name" : "Account login",
+          "uid" : "6833af62de542571",
           "parentUid" : "f22ec7209d706af9e3be90e0728abf5a",
           "status" : "passed",
           "time" : {
-            "start" : 1732995620043,
-            "stop" : 1732995654935,
-            "duration" : 34892
+            "start" : 1732995933036,
+            "stop" : 1732995961002,
+            "duration" : 27966
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ ]
+        }, {
+          "name" : "Create a new request",
+          "uid" : "1871a93f77643f2d",
+          "parentUid" : "f22ec7209d706af9e3be90e0728abf5a",
+          "status" : "passed",
+          "time" : {
+            "start" : 1732995933051,
+            "stop" : 1732995968620,
+            "duration" : 35569
           },
           "flaky" : false,
           "newFailed" : false,
           "parameters" : [ ]
         }, {
           "name" : "Add new services",
-          "uid" : "dc82f89cbab26a11",
+          "uid" : "26fb40b94e2920f3",
           "parentUid" : "f22ec7209d706af9e3be90e0728abf5a",
           "status" : "passed",
           "time" : {
-            "start" : 1732995620067,
-            "stop" : 1732995663915,
-            "duration" : 43848
-          },
-          "flaky" : false,
-          "newFailed" : false,
-          "parameters" : [ ]
-        }, {
-          "name" : "Account login",
-          "uid" : "487336048b95a67e",
-          "parentUid" : "f22ec7209d706af9e3be90e0728abf5a",
-          "status" : "passed",
-          "time" : {
-            "start" : 1732995620095,
-            "stop" : 1732995650457,
-            "duration" : 30362
+            "start" : 1732995933102,
+            "stop" : 1732995976637,
+            "duration" : 43535
           },
           "flaky" : false,
           "newFailed" : false,

@@ -2,9 +2,9 @@
   "name" : "GitHub Actions",
   "type" : "github",
   "url" : "https://github.com/RuslanSR-dev/gh_ranner",
-  "buildOrder" : 15,
-  "buildName" : "12099006879",
-  "buildUrl" : "https://github.com/RuslanSR-dev/gh_ranner/actions/runs/12099006879",
+  "buildOrder" : 16,
+  "buildName" : "12099029405",
+  "buildUrl" : "https://github.com/RuslanSR-dev/gh_ranner/actions/runs/12099029405",
   "reportName" : "Allure Report",
   "reportUrl" : "https://RuslanSR-dev.github.io/gh_ranner/"
 } ]

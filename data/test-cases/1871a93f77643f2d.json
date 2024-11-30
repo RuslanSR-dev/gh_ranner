@@ -1,0 +1,376 @@
+{
+  "uid" : "1871a93f77643f2d",
+  "name" : "Create a new request",
+  "fullName" : "tests.test_add_new_services.TestAddNewServices#test_create_new_request",
+  "historyId" : "a11523a7060bd6db37e62ce2f20289cd",
+  "time" : {
+    "start" : 1732995933051,
+    "stop" : 1732995968620,
+    "duration" : 35569
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_xunit_setup_method_fixture_TestAddNewServices",
+    "time" : {
+      "start" : 1732995933050,
+      "stop" : 1732995933050,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1732995932252,
+      "stop" : 1732995932255,
+      "duration" : 3
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver",
+    "time" : {
+      "start" : 1732995932256,
+      "stop" : 1732995933050,
+      "duration" : 794
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Page open https://sdesk.dev.eft-pos.ru/login",
+      "time" : {
+        "start" : 1732995933051,
+        "stop" : 1732995961235,
+        "duration" : 28184
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Account login",
+      "time" : {
+        "start" : 1732995961235,
+        "stop" : 1732995961834,
+        "duration" : 599
+      },
+      "status" : "passed",
+      "steps" : [ {
+        "name" : "Enter login",
+        "time" : {
+          "start" : 1732995961235,
+          "stop" : 1732995961346,
+          "duration" : 111
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "login",
+          "value" : "'salakhov.rr'"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Enter password",
+        "time" : {
+          "start" : 1732995961346,
+          "stop" : 1732995961422,
+          "duration" : 76
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ {
+          "name" : "password",
+          "value" : "'yQ7u67cKL@_2w'"
+        } ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : true
+      }, {
+        "name" : "Click on button login",
+        "time" : {
+          "start" : 1732995961423,
+          "stop" : 1732995961834,
+          "duration" : 411
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "stepsCount" : 0,
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "hasContent" : false
+      } ],
+      "attachments" : [ ],
+      "parameters" : [ {
+        "name" : "login",
+        "value" : "'salakhov.rr'"
+      }, {
+        "name" : "password",
+        "value" : "'yQ7u67cKL@_2w'"
+      } ],
+      "stepsCount" : 3,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Page https://sdesk.dev.eft-pos.ru/requests is opened",
+      "time" : {
+        "start" : 1732995961834,
+        "stop" : 1732995964842,
+        "duration" : 3008
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Click on the new request button",
+      "time" : {
+        "start" : 1732995964842,
+        "stop" : 1732995965145,
+        "duration" : 303
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Page https://sdesk.dev.eft-pos.ru/requests/new is opened",
+      "time" : {
+        "start" : 1732995965145,
+        "stop" : 1732995965178,
+        "duration" : 33
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Logout from account",
+      "time" : {
+        "start" : 1732995965179,
+        "stop" : 1732995968458,
+        "duration" : 3279
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Click on the assertion button",
+      "time" : {
+        "start" : 1732995968459,
+        "stop" : 1732995968617,
+        "duration" : 158
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Page https://sdesk.dev.eft-pos.ru/login is opened",
+      "time" : {
+        "start" : 1732995968617,
+        "stop" : 1732995968620,
+        "duration" : 3
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 11,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ {
+    "name" : "_xunit_setup_method_fixture_TestAddNewServices::0",
+    "time" : {
+      "start" : 1732995968621,
+      "stop" : 1732995968621,
+      "duration" : 0
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  }, {
+    "name" : "driver::0",
+    "time" : {
+      "start" : 1732995968622,
+      "stop" : 1732995968958,
+      "duration" : 336
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ {
+      "uid" : "8f317a613c406086",
+      "name" : "Screenshot",
+      "source" : "8f317a613c406086.png",
+      "type" : "image/png",
+      "size" : 40938
+    } ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  } ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "New services"
+  }, {
+    "name" : "severity",
+    "value" : "trivial"
+  }, {
+    "name" : "epic",
+    "value" : "Services"
+  }, {
+    "name" : "tag",
+    "value" : "smoke"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_add_new_services"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAddNewServices"
+  }, {
+    "name" : "host",
+    "value" : "b4c35053f30c"
+  }, {
+    "name" : "thread",
+    "value" : "326-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_add_new_services"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "trivial",
+    "retries" : [ ],
+    "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 2,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 4
+      },
+      "items" : [ {
+        "uid" : "c2d07e38ccbb9165",
+        "reportUrl" : "https://RuslanSR-dev.github.io/gh_ranner//#testresult/c2d07e38ccbb9165",
+        "status" : "passed",
+        "time" : {
+          "start" : 1732995620043,
+          "stop" : 1732995654935,
+          "duration" : 34892
+        }
+      }, {
+        "uid" : "60d91e577cd6e788",
+        "reportUrl" : "https://RuslanSR-dev.github.io/gh_ranner//#testresult/60d91e577cd6e788",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom unknown error: no chrome binary at /usr/bin/google-chrome\nStacktrace:\n#0 0x559a6e4ec8da <unknown>\n#1 0x559a6e016530 <unknown>\n#2 0x559a6e04ad2e <unknown>\n#3 0x559a6e0491b5 <unknown>\n#4 0x559a6e0943d5 <unknown>\n#5 0x559a6e093a76 <unknown>\n#6 0x559a6e0881b3 <unknown>\n#7 0x559a6e056e92 <unknown>\n#8 0x559a6e057e6e <unknown>\n#9 0x559a6e4bb33f <unknown>\n#10 0x559a6e4bf45d <unknown>\n#11 0x559a6e4a9987 <unknown>\n#12 0x559a6e4bfbd1 <unknown>\n#13 0x559a6e49172e <unknown>\n#14 0x559a6e4db5e8 <unknown>\n#15 0x559a6e4db7ea <unknown>\n#16 0x559a6e4eb548 <unknown>\n#17 0x7fdf9ad21ac3 <unknown>",
+        "time" : {
+          "start" : 1732982673502,
+          "stop" : 1732982673502,
+          "duration" : 0
+        }
+      }, {
+        "uid" : "32697442e5bbbb7c",
+        "reportUrl" : "URL отчета/#testresult/32697442e5bbbb7c",
+        "status" : "broken",
+        "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom unknown error: no chrome binary at /usr/bin/google-chrome\nStacktrace:\n#0 0x56082deef8da <unknown>\n#1 0x56082da19530 <unknown>\n#2 0x56082da4dd2e <unknown>\n#3 0x56082da4c1b5 <unknown>\n#4 0x56082da973d5 <unknown>\n#5 0x56082da96a76 <unknown>\n#6 0x56082da8b1b3 <unknown>\n#7 0x56082da59e92 <unknown>\n#8 0x56082da5ae6e <unknown>\n#9 0x56082debe33f <unknown>\n#10 0x56082dec245d <unknown>\n#11 0x56082deac987 <unknown>\n#12 0x56082dec2bd1 <unknown>\n#13 0x56082de9472e <unknown>\n#14 0x56082dede5e8 <unknown>\n#15 0x56082dede7ea <unknown>\n#16 0x56082deee548 <unknown>\n#17 0x7f4bbe599ac3 <unknown>",
+        "time" : {
+          "start" : 1732981682137,
+          "stop" : 1732981682137,
+          "duration" : 0
+        }
+      } ]
+    },
+    "tags" : [ "smoke" ]
+  },
+  "source" : "1871a93f77643f2d.json",
+  "parameterValues" : [ ]
+}
