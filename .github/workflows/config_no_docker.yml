@@ -120,17 +120,12 @@ jobs:
 
       - name: Set up dependencies
         run: |
-          apk add --no-cache curl openjdk11-jre
+          sudo apt-get update
+          sudo apt-get install -y curl openjdk-11-jre chromium-browser chromium-chromedriver tzdata jq
           curl -o allure-2.13.8.tgz -Ls https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.13.8/allure-commandline-2.13.8.tgz
-          tar -zxvf allure-2.13.8.tgz -C /opt/
-          ln -s /opt/allure-2.13.8/bin/allure /usr/bin/allure
+          sudo tar -zxvf allure-2.13.8.tgz -C /opt/
+          sudo ln -s /opt/allure-2.13.8/bin/allure /usr/bin/allure
           rm allure-2.13.8.tgz
-          apk add curl jq
-          apk update
-          apk add --no-cache chromium chromium-chromedriver tzdata
-          wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub
-          wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.30-r0/glibc-2.30-r0.apk
-          wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.30-r0/glibc-bin-2.30-r0.apk
 
       - name: Install dependencies
         run: |
