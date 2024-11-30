@@ -1,0 +1,9 @@
+[ {
+  "buildOrder" : 12097631278,
+  "reportUrl" : "URL отчета",
+  "reportName" : "Отчет о тестировании",
+  "data" : {
+    "run" : 3,
+    "retry" : 0
+  }
+} ]

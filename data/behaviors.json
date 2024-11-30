@@ -1,0 +1,52 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "Services",
+    "children" : [ {
+      "name" : "New services",
+      "children" : [ {
+        "name" : "Add new services",
+        "uid" : "40a38670e45cc881",
+        "parentUid" : "70e24000c0c29a4e4eb6122ba08c1925",
+        "status" : "broken",
+        "time" : {
+          "start" : 1732981682137,
+          "stop" : 1732981682137,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Account login",
+        "uid" : "4d7f0c17e34902fa",
+        "parentUid" : "70e24000c0c29a4e4eb6122ba08c1925",
+        "status" : "broken",
+        "time" : {
+          "start" : 1732981682137,
+          "stop" : 1732981682137,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "Create a new request",
+        "uid" : "32697442e5bbbb7c",
+        "parentUid" : "70e24000c0c29a4e4eb6122ba08c1925",
+        "status" : "broken",
+        "time" : {
+          "start" : 1732981682137,
+          "stop" : 1732981682137,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "70e24000c0c29a4e4eb6122ba08c1925"
+    } ],
+    "uid" : "5f9bf329760ed8e755497795e44ce7c7"
+  } ],
+  "name" : "behaviors"
+}

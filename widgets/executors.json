@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "",
+  "buildOrder" : 12097631278,
+  "buildName" : "main",
+  "buildUrl" : "",
+  "reportName" : "Отчет о тестировании",
+  "reportUrl" : "URL отчета"
+} ]

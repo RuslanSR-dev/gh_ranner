@@ -1,0 +1,106 @@
+{
+  "uid" : "40a38670e45cc881",
+  "name" : "Add new services",
+  "fullName" : "tests.test_add_new_services.TestAddNewServices#test_add_new_services",
+  "historyId" : "9442c393196b6d8cfbb530e634297e94",
+  "time" : {
+    "start" : 1732981682137,
+    "stop" : 1732981682137,
+    "duration" : 0
+  },
+  "status" : "broken",
+  "statusMessage" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom unknown error: no chrome binary at /usr/bin/google-chrome\nStacktrace:\n#0 0x55b8bca9c8da <unknown>\n#1 0x55b8bc5c6530 <unknown>\n#2 0x55b8bc5fad2e <unknown>\n#3 0x55b8bc5f91b5 <unknown>\n#4 0x55b8bc6443d5 <unknown>\n#5 0x55b8bc643a76 <unknown>\n#6 0x55b8bc6381b3 <unknown>\n#7 0x55b8bc606e92 <unknown>\n#8 0x55b8bc607e6e <unknown>\n#9 0x55b8bca6b33f <unknown>\n#10 0x55b8bca6f45d <unknown>\n#11 0x55b8bca59987 <unknown>\n#12 0x55b8bca6fbd1 <unknown>\n#13 0x55b8bca4172e <unknown>\n#14 0x55b8bca8b5e8 <unknown>\n#15 0x55b8bca8b7ea <unknown>\n#16 0x55b8bca9b548 <unknown>\n#17 0x7f8ed0e18ac3 <unknown>",
+  "statusTrace" : "request = <SubRequest 'driver' for <Function test_add_new_services>>\n\n    @pytest.fixture(autouse=True)\n    def driver(request):\n>       driver = options_chr()\n\nconftest.py:35: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \nconftest.py:29: in options_chr\n    driver = webdriver.Chrome(options=chrome_options)\n../../../.local/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py:45: in __init__\n    super().__init__(\n../../../.local/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py:66: in __init__\n    super().__init__(command_executor=executor, options=options)\n../../../.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:238: in __init__\n    self.start_session(capabilities)\n../../../.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:325: in start_session\n    response = self.execute(Command.NEW_SESSION, caps)[\"value\"]\n../../../.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py:380: in execute\n    self.error_handler.check_response(response)\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ \n\nself = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x7fd12940bd90>\nresponse = {'status': 500, 'value': '{\"value\":{\"error\":\"session not created\",\"message\":\"session not created\\\\nfrom unknown error:...\\\\n#15 0x55b8bca8b7ea \\\\u003Cunknown>\\\\n#16 0x55b8bca9b548 \\\\u003Cunknown>\\\\n#17 0x7f8ed0e18ac3 \\\\u003Cunknown>\\\\n\"}}'}\n\n    def check_response(self, response: Dict[str, Any]) -> None:\n        \"\"\"Checks that a JSON response from the WebDriver does not have an\n        error.\n    \n        :Args:\n         - response - The JSON response from the WebDriver server as a dictionary\n           object.\n    \n        :Raises: If the response contains an error message.\n        \"\"\"\n        status = response.get(\"status\", None)\n        if not status or status == ErrorCode.SUCCESS:\n            return\n        value = None\n        message = response.get(\"message\", \"\")\n        screen: str = response.get(\"screen\", \"\")\n        stacktrace = None\n        if isinstance(status, int):\n            value_json = response.get(\"value\", None)\n            if value_json and isinstance(value_json, str):\n                import json\n    \n                try:\n                    value = json.loads(value_json)\n                    if len(value) == 1:\n                        value = value[\"value\"]\n                    status = value.get(\"error\", None)\n                    if not status:\n                        status = value.get(\"status\", ErrorCode.UNKNOWN_ERROR)\n                        message = value.get(\"value\") or value.get(\"message\")\n                        if not isinstance(message, str):\n                            value = message\n                            message = message.get(\"message\")\n                    else:\n                        message = value.get(\"message\", None)\n                except ValueError:\n                    pass\n    \n        exception_class: Type[WebDriverException]\n        e = ErrorCode()\n        error_codes = [item for item in dir(e) if not item.startswith(\"__\")]\n        for error_code in error_codes:\n            error_info = getattr(ErrorCode, error_code)\n            if isinstance(error_info, list) and status in error_info:\n                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)\n                break\n        else:\n            exception_class = WebDriverException\n    \n        if not value:\n            value = response[\"value\"]\n        if isinstance(value, str):\n            raise exception_class(value)\n        if message == \"\" and \"message\" in value:\n            message = value[\"message\"]\n    \n        screen = None  # type: ignore[assignment]\n        if \"screen\" in value:\n            screen = value[\"screen\"]\n    \n        stacktrace = None\n        st_value = value.get(\"stackTrace\") or value.get(\"stacktrace\")\n        if st_value:\n            if isinstance(st_value, str):\n                stacktrace = st_value.split(\"\\n\")\n            else:\n                stacktrace = []\n                try:\n                    for frame in st_value:\n                        line = frame.get(\"lineNumber\", \"\")\n                        file = frame.get(\"fileName\", \"<anonymous>\")\n                        if line:\n                            file = f\"{file}:{line}\"\n                        meth = frame.get(\"methodName\", \"<anonymous>\")\n                        if \"className\" in frame:\n                            meth = f\"{frame['className']}.{meth}\"\n                        msg = \"    at %s (%s)\"\n                        msg = msg % (meth, file)\n                        stacktrace.append(msg)\n                except TypeError:\n                    pass\n        if exception_class == UnexpectedAlertPresentException:\n            alert_text = None\n            if \"data\" in value:\n                alert_text = value[\"data\"].get(\"text\")\n            elif \"alert\" in value:\n                alert_text = value[\"alert\"].get(\"text\")\n            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here\n>       raise exception_class(message, screen, stacktrace)\nE       selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nE       from unknown error: no chrome binary at /usr/bin/google-chrome\nE       Stacktrace:\nE       #0 0x55b8bca9c8da <unknown>\nE       #1 0x55b8bc5c6530 <unknown>\nE       #2 0x55b8bc5fad2e <unknown>\nE       #3 0x55b8bc5f91b5 <unknown>\nE       #4 0x55b8bc6443d5 <unknown>\nE       #5 0x55b8bc643a76 <unknown>\nE       #6 0x55b8bc6381b3 <unknown>\nE       #7 0x55b8bc606e92 <unknown>\nE       #8 0x55b8bc607e6e <unknown>\nE       #9 0x55b8bca6b33f <unknown>\nE       #10 0x55b8bca6f45d <unknown>\nE       #11 0x55b8bca59987 <unknown>\nE       #12 0x55b8bca6fbd1 <unknown>\nE       #13 0x55b8bca4172e <unknown>\nE       #14 0x55b8bca8b5e8 <unknown>\nE       #15 0x55b8bca8b7ea <unknown>\nE       #16 0x55b8bca9b548 <unknown>\nE       #17 0x7f8ed0e18ac3 <unknown>\n\n../../../.local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py:229: SessionNotCreatedException",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "driver",
+    "time" : {
+      "start" : 1732981682140,
+      "stop" : 1732981684006,
+      "duration" : 1866
+    },
+    "status" : "broken",
+    "statusMessage" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom unknown error: no chrome binary at /usr/bin/google-chrome\nStacktrace:\n#0 0x55b8bca9c8da <unknown>\n#1 0x55b8bc5c6530 <unknown>\n#2 0x55b8bc5fad2e <unknown>\n#3 0x55b8bc5f91b5 <unknown>\n#4 0x55b8bc6443d5 <unknown>\n#5 0x55b8bc643a76 <unknown>\n#6 0x55b8bc6381b3 <unknown>\n#7 0x55b8bc606e92 <unknown>\n#8 0x55b8bc607e6e <unknown>\n#9 0x55b8bca6b33f <unknown>\n#10 0x55b8bca6f45d <unknown>\n#11 0x55b8bca59987 <unknown>\n#12 0x55b8bca6fbd1 <unknown>\n#13 0x55b8bca4172e <unknown>\n#14 0x55b8bca8b5e8 <unknown>\n#15 0x55b8bca8b7ea <unknown>\n#16 0x55b8bca9b548 <unknown>\n#17 0x7f8ed0e18ac3 <unknown>\n\n",
+    "statusTrace" : "  File \"/home/runner/.local/lib/python3.10/site-packages/pluggy/_callers.py\", line 167, in _multicall\n    teardown.throw(outcome._exception)\n  File \"/home/runner/.local/lib/python3.10/site-packages/_pytest/setuponly.py\", line 36, in pytest_fixture_setup\n    return (yield)\n  File \"/home/runner/.local/lib/python3.10/site-packages/pluggy/_callers.py\", line 103, in _multicall\n    res = hook_impl.function(*args)\n  File \"/home/runner/.local/lib/python3.10/site-packages/_pytest/fixtures.py\", line 1140, in pytest_fixture_setup\n    result = call_fixture_func(fixturefunc, request, kwargs)\n  File \"/home/runner/.local/lib/python3.10/site-packages/_pytest/fixtures.py\", line 891, in call_fixture_func\n    fixture_result = next(generator)\n  File \"/home/runner/work/gh_ranner/gh_ranner/conftest.py\", line 35, in driver\n    driver = options_chr()\n  File \"/home/runner/work/gh_ranner/gh_ranner/conftest.py\", line 29, in options_chr\n    driver = webdriver.Chrome(options=chrome_options)\n  File \"/home/runner/.local/lib/python3.10/site-packages/selenium/webdriver/chrome/webdriver.py\", line 45, in __init__\n    super().__init__(\n  File \"/home/runner/.local/lib/python3.10/site-packages/selenium/webdriver/chromium/webdriver.py\", line 66, in __init__\n    super().__init__(command_executor=executor, options=options)\n  File \"/home/runner/.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py\", line 238, in __init__\n    self.start_session(capabilities)\n  File \"/home/runner/.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py\", line 325, in start_session\n    response = self.execute(Command.NEW_SESSION, caps)[\"value\"]\n  File \"/home/runner/.local/lib/python3.10/site-packages/selenium/webdriver/remote/webdriver.py\", line 380, in execute\n    self.error_handler.check_response(response)\n  File \"/home/runner/.local/lib/python3.10/site-packages/selenium/webdriver/remote/errorhandler.py\", line 229, in check_response\n    raise exception_class(message, screen, stacktrace)\n",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : true,
+    "hasContent" : true
+  }, {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1732981682138,
+      "stop" : 1732981682140,
+      "duration" : 2
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 0,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "New services"
+  }, {
+    "name" : "epic",
+    "value" : "Services"
+  }, {
+    "name" : "severity",
+    "value" : "minor"
+  }, {
+    "name" : "tag",
+    "value" : "regression"
+  }, {
+    "name" : "parentSuite",
+    "value" : "tests"
+  }, {
+    "name" : "suite",
+    "value" : "test_add_new_services"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestAddNewServices"
+  }, {
+    "name" : "host",
+    "value" : "fv-az1198-211"
+  }, {
+    "name" : "thread",
+    "value" : "5773-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "tests.test_add_new_services"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "minor",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ "regression" ]
+  },
+  "source" : "40a38670e45cc881.json",
+  "parameterValues" : [ ]
+}

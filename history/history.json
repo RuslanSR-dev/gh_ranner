@@ -1,0 +1,65 @@
+{
+  "9442c393196b6d8cfbb530e634297e94" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "40a38670e45cc881",
+      "reportUrl" : "URL отчета/#testresult/40a38670e45cc881",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom unknown error: no chrome binary at /usr/bin/google-chrome\nStacktrace:\n#0 0x55b8bca9c8da <unknown>\n#1 0x55b8bc5c6530 <unknown>\n#2 0x55b8bc5fad2e <unknown>\n#3 0x55b8bc5f91b5 <unknown>\n#4 0x55b8bc6443d5 <unknown>\n#5 0x55b8bc643a76 <unknown>\n#6 0x55b8bc6381b3 <unknown>\n#7 0x55b8bc606e92 <unknown>\n#8 0x55b8bc607e6e <unknown>\n#9 0x55b8bca6b33f <unknown>\n#10 0x55b8bca6f45d <unknown>\n#11 0x55b8bca59987 <unknown>\n#12 0x55b8bca6fbd1 <unknown>\n#13 0x55b8bca4172e <unknown>\n#14 0x55b8bca8b5e8 <unknown>\n#15 0x55b8bca8b7ea <unknown>\n#16 0x55b8bca9b548 <unknown>\n#17 0x7f8ed0e18ac3 <unknown>",
+      "time" : {
+        "start" : 1732981682137,
+        "stop" : 1732981682137,
+        "duration" : 0
+      }
+    } ]
+  },
+  "228e38d513cb30ccf4ed3a06049cb00d" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4d7f0c17e34902fa",
+      "reportUrl" : "URL отчета/#testresult/4d7f0c17e34902fa",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom unknown error: no chrome binary at /usr/bin/google-chrome\nStacktrace:\n#0 0x5619e14618da <unknown>\n#1 0x5619e0f8b530 <unknown>\n#2 0x5619e0fbfd2e <unknown>\n#3 0x5619e0fbe1b5 <unknown>\n#4 0x5619e10093d5 <unknown>\n#5 0x5619e1008a76 <unknown>\n#6 0x5619e0ffd1b3 <unknown>\n#7 0x5619e0fcbe92 <unknown>\n#8 0x5619e0fcce6e <unknown>\n#9 0x5619e143033f <unknown>\n#10 0x5619e143445d <unknown>\n#11 0x5619e141e987 <unknown>\n#12 0x5619e1434bd1 <unknown>\n#13 0x5619e140672e <unknown>\n#14 0x5619e14505e8 <unknown>\n#15 0x5619e14507ea <unknown>\n#16 0x5619e1460548 <unknown>\n#17 0x7fc8aaae2ac3 <unknown>",
+      "time" : {
+        "start" : 1732981682137,
+        "stop" : 1732981682137,
+        "duration" : 0
+      }
+    } ]
+  },
+  "a11523a7060bd6db37e62ce2f20289cd" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "32697442e5bbbb7c",
+      "reportUrl" : "URL отчета/#testresult/32697442e5bbbb7c",
+      "status" : "broken",
+      "statusDetails" : "selenium.common.exceptions.SessionNotCreatedException: Message: session not created\nfrom unknown error: no chrome binary at /usr/bin/google-chrome\nStacktrace:\n#0 0x56082deef8da <unknown>\n#1 0x56082da19530 <unknown>\n#2 0x56082da4dd2e <unknown>\n#3 0x56082da4c1b5 <unknown>\n#4 0x56082da973d5 <unknown>\n#5 0x56082da96a76 <unknown>\n#6 0x56082da8b1b3 <unknown>\n#7 0x56082da59e92 <unknown>\n#8 0x56082da5ae6e <unknown>\n#9 0x56082debe33f <unknown>\n#10 0x56082dec245d <unknown>\n#11 0x56082deac987 <unknown>\n#12 0x56082dec2bd1 <unknown>\n#13 0x56082de9472e <unknown>\n#14 0x56082dede5e8 <unknown>\n#15 0x56082dede7ea <unknown>\n#16 0x56082deee548 <unknown>\n#17 0x7f4bbe599ac3 <unknown>",
+      "time" : {
+        "start" : 1732981682137,
+        "stop" : 1732981682137,
+        "duration" : 0
+      }
+    } ]
+  }
+}
