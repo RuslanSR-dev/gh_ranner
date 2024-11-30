@@ -19,8 +19,8 @@ jobs:
       - name: Install git
         run: apk add --no-cache git
 
-      - name: Install sudo and rsync
-        run: apt-get update && apt-get install -y sudo rsync
+      - name: Install rsync on Alpine
+        run: apk add --no-cache rsync
 
       - name: Checkout repository
         uses: actions/checkout@v2
