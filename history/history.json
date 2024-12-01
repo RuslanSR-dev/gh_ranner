@@ -4,11 +4,20 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 2,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 4
+      "total" : 5
     },
     "items" : [ {
+      "uid" : "43717e7441200637",
+      "reportUrl" : "https://RuslanSR-dev.github.io/gh_ranner//#testresult/43717e7441200637",
+      "status" : "passed",
+      "time" : {
+        "start" : 1733065915438,
+        "stop" : 1733065953027,
+        "duration" : 37589
+      }
+    }, {
       "uid" : "26fb40b94e2920f3",
       "reportUrl" : "https://RuslanSR-dev.github.io/gh_ranner//#testresult/26fb40b94e2920f3",
       "status" : "passed",
@@ -53,11 +62,20 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 2,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 4
+      "total" : 5
     },
     "items" : [ {
+      "uid" : "184d5b6f009e423c",
+      "reportUrl" : "https://RuslanSR-dev.github.io/gh_ranner//#testresult/184d5b6f009e423c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1733065915445,
+        "stop" : 1733065943610,
+        "duration" : 28165
+      }
+    }, {
       "uid" : "6833af62de542571",
       "reportUrl" : "https://RuslanSR-dev.github.io/gh_ranner//#testresult/6833af62de542571",
       "status" : "passed",
@@ -102,11 +120,20 @@
       "failed" : 0,
       "broken" : 2,
       "skipped" : 0,
-      "passed" : 2,
+      "passed" : 3,
       "unknown" : 0,
-      "total" : 4
+      "total" : 5
     },
     "items" : [ {
+      "uid" : "4c0d27096edf09fe",
+      "reportUrl" : "https://RuslanSR-dev.github.io/gh_ranner//#testresult/4c0d27096edf09fe",
+      "status" : "passed",
+      "time" : {
+        "start" : 1733065915450,
+        "stop" : 1733065946178,
+        "duration" : 30728
+      }
+    }, {
       "uid" : "1871a93f77643f2d",
       "reportUrl" : "https://RuslanSR-dev.github.io/gh_ranner//#testresult/1871a93f77643f2d",
       "status" : "passed",
