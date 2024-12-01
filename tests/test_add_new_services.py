@@ -37,7 +37,6 @@ class TestAddNewServices(BaseTest):
         self.services_page.is_opened()
         self.services_page.click_on_logout_button()
         self.login_page.is_opened()
-        print("Это regression прошел")
 
     @allure.title("Account login")
     @allure.severity(Severity.CRITICAL)
@@ -46,7 +45,6 @@ class TestAddNewServices(BaseTest):
         self.login_page.open()
         self.login_page.login(os.getenv("LOGIN"), os.getenv("PASSWORD"))
         self.request_page.is_opened()
-        print("Это smoke прошел")
 
     @allure.title("Create a new request")
     @allure.severity(Severity.TRIVIAL)
