@@ -92,12 +92,34 @@ name: CI Workflow
 
 on: [ push ]
 
+env:
+  STAGE: qa
+  BROWSER: chrome
+  LOGIN: ${{ secrets.LOGIN }}
+  PASSWORD: ${{ secrets.PASSWORD }}
+  CI_TOKEN: ${{ secrets.CI_TOKEN }}
+
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Copy gh-pages repo to runner
+        uses: actions/checkout@v2
+        with:
+          ref: gh-pages
+          path: ./.github/gh-pages
+
+      - name: Prepare Allure environment
+        run: |
+          mkdir -p allure-results # Создаем папку для результатов Allure
+          echo "Branch=${GITHUB_REF_NAME}" > allure-results/environment.properties # Указываем текущую ветку
+          echo "Commit=${GITHUB_SHA}" >> allure-results/environment.properties # Указываем SHA коммита
+          echo "Browser=${{ vars.BROWSER }}" >> allure-results/environment.properties # Браузер из переменных
+          echo "Stage=${{ vars.STAGE }}" >> allure-results/environment.properties # Стадия (Stage) тестов
+          echo "{\"name\": \"GitHub Actions\", \"type\": \"github\", \"url\": \"${{ github.server_url }}/${{ github.repository }}\", \"buildOrder\": ${{ github.run_number }}, \"buildName\": \"${{ github.run_id }}\", \"buildUrl\": \"${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\", \"reportUrl\": \"https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/\", \"reportName\": \"Allure Report\"}" > allure-results/executor.json # Добавляем метаданные о сборке
 
       - name: Установить Google Chrome
         run: |
@@ -108,6 +130,35 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y google-chrome-stable
 
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
       - name: Run tests
         run: |
-          google-chrome --version
+          STAGE=dev BROWSER=chrome pytest --alluredir=allure-results --junitxml=test-results/junit.xml || true
+
+      - name: Copy Allure history
+        run: |
+          mkdir -p allure-results/history # Создаем папку history, если она отсутствует
+          if [ -d "./.github/gh-pages/history" ]; then # Проверяем наличие истории
+            cp -R ./.github/gh-pages/history/* allure-results/history/ # Копируем историю
+          fi
+
+      - name: Generate Allure-report
+        env:
+          BROWSER: ${{ vars.BROWSER }}
+          STAGE: ${{ vars.STAGE }}
+          CI_COMMIT_REF_NAME: ${{ github.ref_name }}
+          CI_COMMIT_SHORT_SHA: ${{ github.sha }}
+        run: |
+          allure generate allure-results --clean -o allure-report
+
+      - name: Deploy to Github Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.CI_TOKEN }}
+          branch: gh-pages
+          folder: allure-report
+          clean: false
