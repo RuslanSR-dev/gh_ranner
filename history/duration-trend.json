@@ -1,4 +1,11 @@
 [ {
+  "buildOrder" : 21,
+  "reportUrl" : "https://RuslanSR-dev.github.io/gh_ranner/",
+  "reportName" : "Allure Report",
+  "data" : {
+    "duration" : 39863
+  }
+}, {
   "buildOrder" : 19,
   "reportUrl" : "https://RuslanSR-dev.github.io/gh_ranner/",
   "reportName" : "Allure Report",
