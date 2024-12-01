@@ -121,13 +121,13 @@ jobs:
           echo "Stage=${{ vars.STAGE }}" >> allure-results/environment.properties # Стадия (Stage) тестов
           echo "{\"name\": \"GitHub Actions\", \"type\": \"github\", \"url\": \"${{ github.server_url }}/${{ github.repository }}\", \"buildOrder\": ${{ github.run_number }}, \"buildName\": \"${{ github.run_id }}\", \"buildUrl\": \"${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}\", \"reportUrl\": \"https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/\", \"reportName\": \"Allure Report\"}" > allure-results/executor.json # Добавляем метаданные о сборке
 
-      - name: Install Google Chrome
+      - name: Установить Google Chrome
         run: |
           sudo apt-get update
           sudo apt-get install -y curl openjdk-11-jre jq
           curl -o allure-2.13.8.tgz -Ls https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/2.13.8/allure-commandline-2.13.8.tgz
           tar -zxvf allure-2.13.8.tgz -C /opt/
-          sudo ln -s /opt/allure-2.21.0/bin/allure /usr/bin/allure
+          sudo ln -s /opt/allure-2.13.8/bin/allure /usr/bin/allure
           rm allure-2.13.8.tgz
           sudo apt-get update
           sudo apt-get install -y wget
